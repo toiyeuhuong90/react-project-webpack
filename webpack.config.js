@@ -15,6 +15,17 @@ const VENDOR_LIBS = [
 
 ];
 
+const devServer = {
+    port : 1121,
+    open : true,
+    overlay: true,
+    inline: true,
+    compress : true,
+    contentBase: '/',
+    disableHostCheck: true,
+    historyApiFallback: true
+}
+
 module.exports={
     entry: {
         bundle: './src/index.js',
@@ -77,5 +88,6 @@ module.exports={
         new HtmlWebpackPlugin({
             template : 'src/index.html'
         })
-    ]
+    ],
+    devServer
 }
